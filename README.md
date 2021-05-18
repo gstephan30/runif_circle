@@ -50,7 +50,7 @@ Just needed to switch the formula to pi:
 knitr::include_graphics("IMG_20210518_190917.jpg")
 ```
 
-<img src="IMG_20210518_190917.jpg" width="4608" />
+<img src="IMG_20210518_190917.jpg" width="40%" />
 
 Result of 1000 dots is:
 
@@ -61,5 +61,5 @@ Result of 1000 dots is:
 num <- length(check[check == "inner"]) * ((2*r)^2)
 denum <- length(check)
 (pi <- num/denum/r^2)
-#> [1] 3.108
+#> [1] 3.06
 ```
