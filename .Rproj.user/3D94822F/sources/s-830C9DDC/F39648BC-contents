@@ -1,0 +1,31 @@
+#!/usr/bin/env Rscript
+
+dist_null <- function(a, b) {
+  # a^2+b^2=c^2
+  c <- sqrt(a^2 + b^2)
+  
+  if (c > 1) {
+    check <- "outer"
+  } else (
+    check <- "inner"
+  )
+  
+  return(check)
+}
+
+r <- 5
+n <- 1000
+x <- runif(n)
+y <- runif(n)
+check <- mapply(dist_null, x, y)
+
+if(n <= 10000){
+  plot(x, y, col = as.factor(check))  
+}
+
+# n (in) to n(total) = A(circle) / A(square)
+# A(circle) = n * r^2
+# A(square) = (2r)^2
+num <- length(check[check == "inner"]) * ((2*r)^2)
+denum <- length(check)
+(pi <- num/denum/r^2)
