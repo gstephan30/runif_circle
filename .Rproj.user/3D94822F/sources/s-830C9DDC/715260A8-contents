@@ -54,7 +54,7 @@ To calculate pi, we set the association between the circle to the square (around
 
 Just needed to switch the formula to pi:
 
-```{r out.width="40%"}
+```{r out.width="40%", out.extra='angle=90'}
 knitr::include_graphics("IMG_20210518_190917.jpg")
 ```
 
